@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
           listItem.innerHTML = `
             <span>${item.title} - Day: ${item.delta}</span>
-            <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Remove</button>
+            <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">🗑️ Remove</button>
           `;
           itemsList.appendChild(listItem);
         });
@@ -68,7 +68,7 @@ items.forEach((item, index) => {
     const icsDate = eventDate.toISOString().split('T')[0].replace(/-/g, '');
     const icsEndDate = eventEndDate.toISOString().split('T')[0].replace(/-/g, '');
 
-    const eventName = `${item.title} ${name}`;
+    const eventName = `${item.title} - ${name}`;
 
     // Generate UID based on event date and a random segment
     const uid = `uid-${eventDate.getTime()}-${Math.random().toString(36).substring(2, 15)}`;
