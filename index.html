@@ -13,8 +13,9 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand">📅 Calendar Generator</a>
-              <div class="d-flex">
-                <button class="btn btn-outline-secondary btn-sm" id="configureBtn">🔧Configure</button>
+              <div class="d-flex gap-3">
+                <button class="btn btn-outline-secondary btn-sm" id="configureBtn">🔧Calendar 1</button>
+                <button class="btn btn-outline-secondary btn-sm" id="configureBtn2">🔧Calendar 2</button>
               </div>
             </div>
           </nav>
@@ -33,8 +34,9 @@
                     </div>
                   </form>
             </div>
-            <div class="card-footer">
-              <button type="submit" id="submitBtn" class="btn btn-success">📁 Generate File</button>
+            <div class="card-footer d-flex flex gap-3">
+              <button type="submit" id="submitBtn" class="btn btn-success">📅 Generate Calendar 1</button>
+              <button type="submit" id="submitBtn2" class="btn btn-success">📅 Generate Calendar 2</button>
             </div>
           </div>
         </div>
@@ -45,7 +47,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Event Options</h5>
+                    <h5 class="modal-title">Editing Calendar 2</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -61,6 +63,36 @@
                       <button type="submit" class="btn btn-success mt-2">✅ Add Item</button>
                     </form>
                     <ul id="itemsList" class="list-group mt-3">
+                      <!-- List items will be added here -->
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="configureModal2" tabindex="-1" role="dialog" aria-labelledby="configureModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Editing Calendar 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="itemForm2">
+                      <div class="form-group py-2">
+                        <label for="titleInput2">Event</label>
+                        <input type="text" class="form-control" id="titleInput2" placeholder="What event?" required>
+                      </div>
+                      <div class="form-group py-2">
+                        <label for="deltaInput2">Day</label>
+                        <input type="number" class="form-control" id="deltaInput2" placeholder="Which day?" required>
+                      </div>
+                      <button type="submit" class="btn btn-success mt-2">✅ Add Item</button>
+                    </form>
+                    <ul id="itemsList2" class="list-group mt-3">
                       <!-- List items will be added here -->
                     </ul>
                   </div>
